@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 
 def question_1(df):
-  total_roi_by_bank = df.groupby('Bank_Name')['Return_on_Investment'].mean().idxmac()
+  total_roi_by_bank = df.groupby('Bank_Name')['Return_on_Investment'].mean().idxmax()
   st.write("Bank with Highest Average Return on Investment (ROI):")
   st.write(total_roi_by_bank)
 
