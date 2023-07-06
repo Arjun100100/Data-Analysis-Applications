@@ -1,6 +1,5 @@
 import pandas as pd
 import streamlit as st
-import matplotlib.ticker as mtick
 
 def question_1(df):
   total_roi_by_bank = df.groupby('Bank_Name')['Return_on_Investment'].mean().idxmac()
