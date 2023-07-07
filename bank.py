@@ -44,6 +44,12 @@ def main():
         st.subheader("Sample Data")
         st.dataframe(df.head())
 
+        st.subheader("Questions")
+        st.write("1. Which bank has the average overall return on investment (ROI) across all years?")
+        st.write("2. What is the trend in interest rates over the years for each bank?")
+        st.write("3. Which investment type is the most popular among customers in each bank?")
+        st.write("4. Which investment type has shown the highest volatility in returns?")
+
         # Get user input for questions selection
         st.subheader("Step 2: Select Questions")
         questions = st.multiselect(
