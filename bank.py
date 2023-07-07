@@ -1,8 +1,9 @@
+import streamlit as st
 import seaborn as sns
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
 import pandas as pd
-import streamlit as st
+
 
 
 def question_1(df):
