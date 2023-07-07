@@ -1,4 +1,4 @@
-!pip install seaborn matplotlib matplotlib.ticker
+pip install seaborn matplotlib matplotlib.ticker
 
 import pandas as pd
 import seaborn as sns
