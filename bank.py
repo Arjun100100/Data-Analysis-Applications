@@ -1,13 +1,3 @@
-import subprocess
-
-# Define the packages to install
-packages = ['seaborn', 'matplotlib']
-
-# Install the packages using pip
-for package in packages:
-    subprocess.check_call(['pip', 'install', package])
-
-# Import the required packages
 import seaborn as sns
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
