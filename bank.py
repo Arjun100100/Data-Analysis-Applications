@@ -1,9 +1,19 @@
+import subprocess
 
-import pandas as pd
+# Define the packages to install
+packages = ['seaborn', 'matplotlib']
+
+# Install the packages using pip
+for package in packages:
+    subprocess.check_call(['pip', 'install', package])
+
+# Import the required packages
 import seaborn as sns
 import matplotlib.pyplot as plt
-import streamlit as st
 import matplotlib.ticker as mtick
+import pandas as pd
+import streamlit as st
+
 
 def question_1(df):
   total_roi_by_bank = df.groupby('Bank_Name')['Return_on_Investment'].mean().idxmax()
