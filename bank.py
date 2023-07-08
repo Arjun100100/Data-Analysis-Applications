@@ -1,4 +1,4 @@
-
+pip install seaborn matplotlib
 
 import seaborn as sns
 import matplotlib.pyplot as plt
