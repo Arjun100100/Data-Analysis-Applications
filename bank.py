@@ -75,9 +75,7 @@ def main():
     st.title("Investment Trends & Interest Rates Analysis Report")
 
     # Objective of analysis 
-    st.write("Objective:This data analysis aims to examine investment trends, interest rates, and customer preferences across various banks and years.
-    By answering key questions related to return on investment, investment types, correlation between capital invested and current value,
-    and overall bank performance, we seek to provide valuable insights for optimizing investment strategies and decision-making.")
+    st.write("Objective:This data analysis aims to examine investment trends, interest rates, and customer preferences across various banks and years. By answering key questions related to return on investment, investment types, correlation between capital invested and current value, and overall bank performance, we seek to provide valuable insights for optimizing investment strategies and decision-making.")
 
     # File uploader to upload the data file
     st.subheader("Step 1: Upload Data")
