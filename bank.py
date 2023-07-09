@@ -72,7 +72,7 @@ def question_7(df):
 
 
 def main():
-    st.title("Investment Trends & Interest Rates Analysis Report")
+    
 
 
     background_image_url = 'https://img.freepik.com/free-vector/wave-background-abstract-gradient-design_483537-3688.jpg'
@@ -93,7 +93,7 @@ def main():
     st.markdown(background_style, unsafe_allow_html=True)
     st.markdown('<div class="container">Content of your Streamlit app goes here</div>', unsafe_allow_html=True)
 
-
+    st.title("Investment Trends & Interest Rates Analysis Report")
   
     # Objective of analysis 
     st.subheader("Objective of analysis")
