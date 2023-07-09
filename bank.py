@@ -74,19 +74,24 @@ def question_7(df):
 def main():
     st.title("Investment Trends & Interest Rates Analysis Report")
 
-    background_image_url = 'https://www.freepik.com/free-photos-vectors/dark-website-background'
 
-    st.markdown(
-      f"""
-      <style>
-      body {{
-        background-image: url('{background_image_url}');
-        background-size: cover;
-      }}
-      </style>
-      """,
-      unsafe_allow_html=True
-    )
+    background_image_url = 'https://img.freepik.com/free-vector/wave-background-abstract-gradient-design_483537-3688.jpg'
+
+    # Set the CSS style with the background image
+    background_style = f"""
+        <style>
+        .container {{
+          background-image: url('{background_image_url}');
+          background-size: cover;
+          padding: 20px;
+          margin: 20px;
+        }}
+          </style>
+    """
+
+    # Display the container with the background image
+    st.markdown(background_style, unsafe_allow_html=True)
+    st.markdown('<div class="container">Content of your Streamlit app goes here</div>', unsafe_allow_html=True)
 
 
   
