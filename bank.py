@@ -82,10 +82,10 @@ def main():
       body {{
         background-image: url('{background_image_url}');
         background-size: cover;
-    }}
-    </style>
-    """,
-    unsafe_allow_html=True
+      }}
+      </style>
+      """,
+      unsafe_allow_html=True
     )
 
 
