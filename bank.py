@@ -78,6 +78,11 @@ def main():
     st.subheader("Objective of analysis")
     st.write("This data analysis aims to examine investment trends, interest rates, and customer preferences across various banks and years. By answering key questions related to return on investment, investment types, correlation between capital invested and current value, and overall bank performance, we seek to provide valuable insights for optimizing investment strategies and decision-making.")
 
+    # Data Format to be Used
+    st.subheader("Data Format for Analysis")
+    st.write("Customer_ID INT,	Bank_Name STRING,	Investment_Year INT,	Investment_Type STRING,	Capital_Invested INT,	Current_Value_of_Investment INT,	Interest_Rate FLOAT,	Return_on_Investment FLOAT")
+
+  
     # File uploader to upload the data file
     st.subheader("Step 1: Upload Data")
     uploaded_file = st.file_uploader("Choose a CSV file", type=["csv"])
