@@ -74,6 +74,22 @@ def question_7(df):
 def main():
     st.title("Investment Trends & Interest Rates Analysis Report")
 
+    background_image_url = 'https://www.freepik.com/free-photos-vectors/dark-website-background'
+
+    st.markdown(
+      f"""
+      <style>
+      body {{
+        background-image: url('{background_image_url}');
+        background-size: cover;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+    )
+
+
+  
     # Objective of analysis 
     st.subheader("Objective of analysis")
     st.write("This data analysis aims to examine investment trends, interest rates, and customer preferences across various banks and years. By answering key questions related to return on investment, investment types, correlation between capital invested and current value, and overall bank performance, we seek to provide valuable insights for optimizing investment strategies and decision-making.")
