@@ -1,5 +1,3 @@
-
-
 import seaborn as sns
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
@@ -12,10 +10,12 @@ def question_1(df):
   st.write("Bank with Highest Average Return on Investment (ROI):")
   st.write(total_roi_by_bank)
 
+
 def question_2(df):
   roi_by_investment_type = df.groupby('Investment_Type')['Return_on_Investment'].mean().sort_values(ascending=False)
   st.write("Average Interest Rate Variation Among banks:")
   st.write(roi_by_investment_type)
+
 
 def question_3(df):
   plt.figure(figsize=(8, 6))
@@ -29,8 +29,10 @@ def question_3(df):
   st.write("Correlation Coefficient between Capital Invested and Current Value:")
   st.write(correlation_coefficient)
 
+
 def question_4(df):
-  investment_type_counts = df.pivot_table(index="Bank_Name", columns="Investment_Type", values="Customer_ID", aggfunc="count")
+  investment_type_counts = df.pivot_table(index="Bank_Name", columns="Investment_Type",
+                                          values="Customer_ID", aggfunc="count")
   st.write("Investment Type Counts by Bank:")
   st.write(investment_type_counts)
 
@@ -50,6 +52,7 @@ def question_5(df):
   plt.gca().yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
   st.pyplot(plt.gcf())
 
+
 def question_6(df):
   bins = [0, 10000, 20000, 40000, 60000, 80000, 100000, float('inf')]
   labels = ['<10k', '10k-20k', '20k-40k', '40k-60k', '60k-80k', '80k-100k', '100k+']
@@ -63,6 +66,7 @@ def question_6(df):
   plt.grid(axis='y')
   st.pyplot(plt.gcf())
 
+
 def question_7(df):
   volatility_by_investment_type = df.groupby('Investment_Type')['Return_on_Investment'].std()
   highest_volatility_investment_type = volatility_by_investment_type.idxmax()
@@ -72,18 +76,8 @@ def question_7(df):
 
 
 def main():
-  
-    st.title("Investment Trends & Interest Rates Analysis Report")
-  
-    # Objective of analysis 
-    st.subheader("Objective of analysis")
-    st.write("This data analysis aims to examine investment trends, interest rates, and customer preferences across various banks and years. By answering key questions related to return on investment, investment types, correlation between capital invested and current value, and overall bank performance, we seek to provide valuable insights for optimizing investment strategies and decision-making.")
+    st.title("Data Analysis Report")
 
-    # Data Format to be Used
-    st.subheader("Data Format for Analysis")
-    st.write("Customer_ID INT,	Bank_Name STRING,	Investment_Year INT,	Investment_Type STRING,	Capital_Invested INT,	Current_Value_of_Investment INT,	Interest_Rate FLOAT,	Return_on_Investment FLOAT")
-
-  
     # File uploader to upload the data file
     st.subheader("Step 1: Upload Data")
     uploaded_file = st.file_uploader("Choose a CSV file", type=["csv"])
@@ -128,7 +122,6 @@ def main():
         if 7 in questions:
             question_7(df)
 
+
 if __name__ == "__main__":
     main()
-
-
