@@ -13,7 +13,7 @@ def question_1(df):
 
 def question_2(df):
   roi_by_investment_type = df.groupby('Investment_Type')['Return_on_Investment'].mean().sort_values(ascending=False)
-  st.write("Average Interest Rate Variation Among banks:")
+  st.write("Average ROI Variation Among banks:")
   st.write(roi_by_investment_type)
 
 
