@@ -101,7 +101,7 @@ def main():
 
         st.subheader("Questions")
         st.write("1. Which bank has the average overall return on investment (ROI) across all years?")
-        st.write("2. What is the trend in interest rates over the years for each bank?")
+        st.write("2. How does the return on investment (ROI) vary across different investment types?")
         st.write("3. Is there any correlation between capital invested and current value of investment?")
         st.write("4. Which investment type is the most popular among customers in each bank?")
         st.write("5. What is the trend in interest rates over the years for each bank?")
