@@ -42,6 +42,8 @@ def question_4(df):
 
 
 def question_5(df):
+  df["Investment_Year"] = df["Investment_Year"].astype(int)
+  df = df.sort_values("Investment_Year")
   sns.set_style("white")
   plt.figure(figsize=(10, 6))
   sns.lineplot(x="Investment_Year", y="Interest_Rate", hue="Bank_Name", data=df)
@@ -93,7 +95,7 @@ def main():
 
     if uploaded_file is not None:
         df = pd.read_csv(uploaded_file)
-        df['Investment_Year'] = df['Investment_Year'].astype(int)
+        df['Investment_Year'] = df['Investment_Year'].astype(str)
 
         # Show a sample of the data
         st.subheader("Sample Data")
